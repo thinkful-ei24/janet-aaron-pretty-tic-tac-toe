@@ -19,7 +19,7 @@ class Grids extends Component {
       return <div className = {this.props.grid} onClick={() => this.setState({something: false, player: !this.state.player})}></div>;
     }
     if (this.state.something === false) {
-      return <Pictures imagesrc= 'https://picsum.photos/200/300/?random' grid={this.props.grid} />
+      return <Pictures imagesrc= {this.props.imagesrc} grid={this.props.grid} />
     }
   }
 }

@@ -2,12 +2,21 @@ import React, { Component } from "react";
 import "./App.css";
 import Grids from "./grids";
 
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       inGame: false,
       display: true,
+      image: [
+        'https://picsum.photos/200/300/?random',
+        'https://picsum.photos/100/200/?random'
+      ],
+
+
+      gridBox: [1,2,3,4,5,6,7,8,9]
+
       
 
     };
@@ -17,13 +26,17 @@ class App extends Component {
 
 
   render() {
-    let className;
+    function randomNumber() {
+      return Math.floor(Math.random() * 2);
+    }
 
-    if (this.state.display){
-      className= 'player2 grid-item';
-    } 
-    if(!this.state.display){
-      className= 'player1 grid-item';
+    let className;
+    let imageNumber = this.state.image[`${randomNumber()}`];
+    if (this.state.display) {
+      className = 'player2 grid-item';
+    }
+    if (!this.state.display) {
+      className = 'player1 grid-item';
     }
 
 
@@ -31,34 +44,34 @@ class App extends Component {
       return (
         <div className="grid-container">
           {" "}
-          <Grids grid={className} onClick={() => {
+          <Grids grid={className} imagesrc={this.state.image[`${randomNumber()}`]} onClick={() => {
+            this.setState({ display: !this.state.display})}}/>
+          <Grids grid={className} imagesrc={this.state.image[`${randomNumber()}`]} onClick={() => {
             this.setState({ display: !this.state.display });
           }} />
-          <Grids grid={className} onClick={() => {
+          <Grids grid={className} imagesrc={this.state.image[`${randomNumber()}`]} onClick={() => {
             this.setState({ display: !this.state.display });
           }} />
-          <Grids grid={className} onClick={() => {
+          <Grids grid={className} imagesrc={this.state.image[`${randomNumber()}`]} onClick={() => {
             this.setState({ display: !this.state.display });
           }} />
-          <Grids grid={className} onClick={() => {
+          <Grids grid={className} imagesrc={this.state.image[`${randomNumber()}`]} onClick={() => {
             this.setState({ display: !this.state.display });
           }} />
-          <Grids grid={className} onClick={() => {
+          <Grids grid={className} imagesrc={this.state.image[`${randomNumber()}`]} onClick={() => {
             this.setState({ display: !this.state.display });
           }} />
-          <Grids grid={className} onClick={() => {
+          <Grids grid={className} imagesrc={this.state.image[`${randomNumber()}`]} onClick={() => {
             this.setState({ display: !this.state.display });
           }} />
-          <Grids grid={className} onClick={() => {
+          <Grids grid={className} imagesrc={this.state.image[`${randomNumber()}`]} onClick={() => {
             this.setState({ display: !this.state.display });
           }} />
-          <Grids grid={className} onClick={() => {
+          <Grids grid={className} imagesrc={this.state.image[`${randomNumber()}`]} onClick={() => {
             this.setState({ display: !this.state.display });
           }} />
-          <Grids grid={className} onClick={() => {
-            this.setState({ display: !this.state.display });
-          }} />
-
+          
+          
           <button
             type="button"
             onClick={() => this.setState({ inGame: "rick" })}

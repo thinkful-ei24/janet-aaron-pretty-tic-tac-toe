@@ -5,7 +5,7 @@ export default function Pictures(props) {
 
     return(
 
-        <div className={props.grid} ><img className="boxImg" src={props.imagesrc} /></div>
+        <div className={props.grid} ><img className="boxImg" src={props.imagesrc}/></div>
     
     );
   
