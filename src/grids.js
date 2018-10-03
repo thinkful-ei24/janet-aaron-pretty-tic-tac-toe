@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Pictures from './pictures';
+import "./index.css"
 
 class Grids extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class Grids extends Component {
 
 
     if (this.props.somethingState === true) {
-      return <div className = {this.props.grid} onClick={this.props.change}></div>;
+      return <div className =  "player1 grid-item" onClick={this.props.change}></div>;
     }
     if (this.props.somethingState === false) {
       return <Pictures imagesrc= {this.props.imagesrc} grid={this.props.grid} />

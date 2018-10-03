@@ -55,14 +55,7 @@ class App extends Component {
   }
 
   render() {
-    let className;
 
-    if (this.state.display) {
-      className = "player2 grid-item";
-    }
-    if (!this.state.display) {
-      className = "player1 grid-item";
-    }
 
     const image1 = this.state.image[this.state.numbers[0].one];
     const image2 = this.state.image[this.state.numbers[1].two];
@@ -79,55 +72,46 @@ class App extends Component {
         <div className="grid-container">
           {" "}
           <Grids
-            grid={className}
             imagesrc={image1}
             somethingState={this.state.something}
             change={() => this.setState({ something: false })}
           />
           <Grids
-            grid={className}
             imagesrc={image2}
             somethingState={this.state.something2}
             change={() => this.setState({ something2: false })}
           />
           <Grids
-            grid={className}
             imagesrc={image3}
             somethingState={this.state.something3}
             change={() => this.setState({ something3: false })}
           />
           <Grids
-            grid={className}
             imagesrc={image4}
             somethingState={this.state.something4}
             change={() => this.setState({ something4: false })}
           />
           <Grids
-            grid={className}
             imagesrc={image5}
             somethingState={this.state.something5}
             change={() => this.setState({ something5: false })}
           />
           <Grids
-            grid={className}
             imagesrc={image6}
             somethingState={this.state.something6}
             change={() => this.setState({ something6: false })}
           />
           <Grids
-            grid={className}
             imagesrc={image7}
             somethingState={this.state.something7}
             change={() => this.setState({ something7: false })}
           />
           <Grids
-            grid={className}
             imagesrc={image8}
             somethingState={this.state.something8}
             change={() => this.setState({ something8: false })}
           />
           <Grids
-            grid={className}
             imagesrc={image9}
             somethingState={this.state.something9}
             change={() => this.setState({ something9: false })}
@@ -141,20 +125,6 @@ class App extends Component {
         </div>
       );
     }
-
-    // if (this.state.inGame === true) {
-    //   return (
-    //     <div>
-    //       <button
-    //         type="button"
-    //         onClick={() => this.setState({ inGame: false })}
-    //       >
-    //         New Game
-    //       </button>
-    //     </div>
-    //   );
-    // }
-
     if (this.state.inGame === "rick") {
       return (
        <div>
@@ -192,6 +162,9 @@ class App extends Component {
             "https://picsum.photos/400/400/?random",
             "https://picsum.photos/200/100/?random"
           ]
+
+        
+        
         })}
        />
        </div>
