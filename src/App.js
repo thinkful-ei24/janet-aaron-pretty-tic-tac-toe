@@ -37,21 +37,21 @@ class App extends Component {
         "https://picsum.photos/150/250/?random",
         "https://picsum.photos/400/400/?random",
         "https://picsum.photos/200/100/?random"
+      ],
+
+      numbers: [
+        { one: Math.floor(Math.random() * 8) },
+        { two: Math.floor(Math.random() * 8) },
+        { three: Math.floor(Math.random() * 8) },
+        { four: Math.floor(Math.random() * 8) },
+        { five: Math.floor(Math.random() * 8) },
+        { six: Math.floor(Math.random() * 8) },
+        { seven: Math.floor(Math.random() * 8) },
+        { eight: Math.floor(Math.random() * 8) },
+        { nine: Math.floor(Math.random() * 8) }
       ]
     };
   }
-
-  numbers = [
-    { one: Math.floor(Math.random() * 8) },
-    { two: Math.floor(Math.random() * 8) },
-    { three: Math.floor(Math.random() * 8) },
-    { four: Math.floor(Math.random() * 8) },
-    { five: Math.floor(Math.random() * 8) },
-    { six: Math.floor(Math.random() * 8) },
-    { seven: Math.floor(Math.random() * 8) },
-    { eight: Math.floor(Math.random() * 8) },
-    { nine: Math.floor(Math.random() * 8) }
-  ];
 
   render() {
     let className;
@@ -63,15 +63,15 @@ class App extends Component {
       className = "player1 grid-item";
     }
 
-    const image1 = this.state.image[this.numbers[0].one];
-    const image2 = this.state.image[this.numbers[1].two];
-    const image3 = this.state.image[this.numbers[2].three];
-    const image4 = this.state.image[this.numbers[3].four];
-    const image5 = this.state.image[this.numbers[4].five];
-    const image6 = this.state.image[this.numbers[5].six];
-    const image7 = this.state.image[this.numbers[6].seven];
-    const image8 = this.state.image[this.numbers[7].eight];
-    const image9 = this.state.image[this.numbers[8].nine];
+    const image1 = this.state.image[this.state.numbers[0].one];
+    const image2 = this.state.image[this.state.numbers[1].two];
+    const image3 = this.state.image[this.state.numbers[2].three];
+    const image4 = this.state.image[this.state.numbers[3].four];
+    const image5 = this.state.image[this.state.numbers[4].five];
+    const image6 = this.state.image[this.state.numbers[5].six];
+    const image7 = this.state.image[this.state.numbers[6].seven];
+    const image8 = this.state.image[this.state.numbers[7].eight];
+    const image9 = this.state.image[this.state.numbers[8].nine];
 
     if (this.state.inGame === false) {
       return (
@@ -171,7 +171,28 @@ class App extends Component {
                 something6: true,
                 something7: true,
                 something8: true,
-                something9: true
+                something9: true,
+                numbers: [
+                  { one: Math.floor(Math.random() * 8) },
+                  { two: Math.floor(Math.random() * 8) },
+                  { three: Math.floor(Math.random() * 8) },
+                  { four: Math.floor(Math.random() * 8) },
+                  { five: Math.floor(Math.random() * 8) },
+                  { six: Math.floor(Math.random() * 8) },
+                  { seven: Math.floor(Math.random() * 8) },
+                  { eight: Math.floor(Math.random() * 8) },
+                  { nine: Math.floor(Math.random() * 8) }
+                ],
+                image: [
+                  "https://picsum.photos/200/300/?random",
+                  "https://picsum.photos/100/200/?random",
+                  "https://picsum.photos/100/400/?random",
+                  "https://picsum.photos/200/200/?random",
+                  "https://picsum.photos/400/700/?random",
+                  "https://picsum.photos/150/250/?random",
+                  "https://picsum.photos/400/400/?random",
+                  "https://picsum.photos/200/100/?random"
+                ]
               })
             }
           >
