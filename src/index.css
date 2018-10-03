@@ -26,7 +26,7 @@ code {
 }
 
 .grid-item {
-  background-color: rgb(121, 22, 252) ;
+  background-color: rgb(185, 132, 255) ;
   border: 1px solid black;
   padding: 20px;
   font-size: 30px;
@@ -34,7 +34,7 @@ code {
 }
 
 .player1 {
-background-color: aquamarine;
+background-color: rgb(167, 212, 248);
 }
 
 
