@@ -6,7 +6,10 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      inGame: false
+      inGame: false,
+      display: true,
+      
+
     };
   }
 
@@ -14,20 +17,48 @@ class App extends Component {
 
 
   render() {
+    let className;
+
+    if (this.state.display){
+      className= 'player2 grid-item';
+    } 
+    if(!this.state.display){
+      className= 'player1 grid-item';
+    }
+
+
     if (this.state.inGame === false) {
       return (
         <div className="grid-container">
           {" "}
-          <Grids />
-          <Grids />
-          <Grids />
-          <Grids />
-          <Grids />
-          <Grids />
-          <Grids />
-          <Grids />
-          <Grids />
-          
+          <Grids grid={className} onClick={() => {
+            this.setState({ display: !this.state.display });
+          }} />
+          <Grids grid={className} onClick={() => {
+            this.setState({ display: !this.state.display });
+          }} />
+          <Grids grid={className} onClick={() => {
+            this.setState({ display: !this.state.display });
+          }} />
+          <Grids grid={className} onClick={() => {
+            this.setState({ display: !this.state.display });
+          }} />
+          <Grids grid={className} onClick={() => {
+            this.setState({ display: !this.state.display });
+          }} />
+          <Grids grid={className} onClick={() => {
+            this.setState({ display: !this.state.display });
+          }} />
+          <Grids grid={className} onClick={() => {
+            this.setState({ display: !this.state.display });
+          }} />
+          <Grids grid={className} onClick={() => {
+            this.setState({ display: !this.state.display });
+          }} />
+          <Grids grid={className} onClick={() => {
+            this.setState({ display: !this.state.display });
+          }} />
+
           <button
             type="button"
             onClick={() => this.setState({ inGame: "rick" })}
@@ -37,6 +68,9 @@ class App extends Component {
         </div>
       );
     }
+
+  
+
 
     if (this.state.inGame === true) {
       return (
