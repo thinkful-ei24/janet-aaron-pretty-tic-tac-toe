@@ -6,19 +6,15 @@ class Grids extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      something: true,
-      player: true
-    };
   }
 
   render() {
 
 
-    if (this.state.something === true) {
-      return <div className = {this.props.grid} onClick={() => this.setState({something: false, player: !this.state.player})}></div>;
+    if (this.props.somethingState === true) {
+      return <div className = {this.props.grid} onClick={this.props.change}></div>;
     }
-    if (this.state.something === false) {
+    if (this.props.somethingState === false) {
       return <Pictures imagesrc= {this.props.imagesrc} grid={this.props.grid} />
     }
   }
