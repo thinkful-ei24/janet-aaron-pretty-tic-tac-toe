@@ -8,7 +8,7 @@ class Grids extends Component {
 
     this.state = {
       something: true,
-      player: one
+      player: 'one'
     };
   }
 
