@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Grids from "./grids";
+import Rick from './rick';
 
 class App extends Component {
   constructor(props) {
@@ -141,67 +142,63 @@ class App extends Component {
       );
     }
 
-    if (this.state.inGame === true) {
-      return (
-        <div>
-          <button
-            type="button"
-            onClick={() => this.setState({ inGame: false })}
-          >
-            New Game
-          </button>
-        </div>
-      );
-    }
+    // if (this.state.inGame === true) {
+    //   return (
+    //     <div>
+    //       <button
+    //         type="button"
+    //         onClick={() => this.setState({ inGame: false })}
+    //       >
+    //         New Game
+    //       </button>
+    //     </div>
+    //   );
+    // }
 
     if (this.state.inGame === "rick") {
       return (
-        <div>
-          <img src="https://media.giphy.com/media/a6OnFHzHgCU1O/giphy.gif" />
-          <button
-            type="button"
-            onClick={() =>
-              this.setState({
-                inGame: false,
-                something: true,
-                something2: true,
-                something3: true,
-                something4: true,
-                something5: true,
-                something6: true,
-                something7: true,
-                something8: true,
-                something9: true,
-                numbers: [
-                  { one: Math.floor(Math.random() * 8) },
-                  { two: Math.floor(Math.random() * 8) },
-                  { three: Math.floor(Math.random() * 8) },
-                  { four: Math.floor(Math.random() * 8) },
-                  { five: Math.floor(Math.random() * 8) },
-                  { six: Math.floor(Math.random() * 8) },
-                  { seven: Math.floor(Math.random() * 8) },
-                  { eight: Math.floor(Math.random() * 8) },
-                  { nine: Math.floor(Math.random() * 8) }
-                ],
-                image: [
-                  "https://picsum.photos/200/300/?random",
-                  "https://picsum.photos/100/200/?random",
-                  "https://picsum.photos/100/400/?random",
-                  "https://picsum.photos/200/200/?random",
-                  "https://picsum.photos/400/700/?random",
-                  "https://picsum.photos/150/250/?random",
-                  "https://picsum.photos/400/400/?random",
-                  "https://picsum.photos/200/100/?random"
-                ]
-              })
-            }
-          >
-            New Game
-          </button>
-        </div>
+       <div>
+       <Rick
+        change={() => this.setState({ 
+          inGame: false,
+        
+          something: true,
+          something2: true,
+          something3: true,
+          something4: true,
+          something5: true,
+          something6: true,
+          something7: true,
+          something8: true,
+          something9: true,
+          numbers: [
+            { one: Math.floor(Math.random() * 8) },
+            { two: Math.floor(Math.random() * 8) },
+            { three: Math.floor(Math.random() * 8) },
+            { four: Math.floor(Math.random() * 8) },
+            { five: Math.floor(Math.random() * 8) },
+            { six: Math.floor(Math.random() * 8) },
+            { seven: Math.floor(Math.random() * 8) },
+            { eight: Math.floor(Math.random() * 8) },
+            { nine: Math.floor(Math.random() * 8) }
+          ],
+          image: [
+            "https://picsum.photos/200/300/?random",
+            "https://picsum.photos/100/200/?random",
+            "https://picsum.photos/100/400/?random",
+            "https://picsum.photos/200/200/?random",
+            "https://picsum.photos/400/700/?random",
+            "https://picsum.photos/150/250/?random",
+            "https://picsum.photos/400/400/?random",
+            "https://picsum.photos/200/100/?random"
+          ]
+        })}
+       />
+       </div>
       );
     }
   }
 }
 
 export default App;
+
